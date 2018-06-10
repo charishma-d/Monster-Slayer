@@ -1,7 +1,19 @@
+body{
+    background-image: url("../background.jpg");
+    background-size: cover;
+    height:100%;
+}
 .text-center {
     text-align: center;
+    font-family:"Palatino Linotype", "Book Antiqua", Palatino, serif;
+    font-weight:400;    
 }
 
+.title{
+    font-family:Comic Sans, Comic Sans MS, cursive;
+    font-weight:400;
+    text-align:center;
+}
 .healthbar {
     width: 80%;
     height: 40px;

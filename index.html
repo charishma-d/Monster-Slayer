@@ -9,8 +9,9 @@
 <body>
 <div id="app">
     <section class="row">
+        <h1 class="title">Monster - Slayer Game!!</h1>
         <div class="small-6 columns">
-            <h1 class="text-center">YOU</h1>
+            <h2 class="text-center">YOU</h2>
             <div class="healthbar">
                 <div class="healthbar text-center" style="background-color: green; margin: 0; color: white;"
                 :style="{width:playerHealth+'%'}">
@@ -19,7 +20,7 @@
             </div>
         </div>
         <div class="small-6 columns">
-            <h1 class="text-center">MONSTER</h1>
+            <h2 class="text-center">MONSTER</h2>
             <div class="healthbar">
                 <div class="healthbar text-center" style="background-color: green; margin: 0; color: white;"
                 :style="{width:monsterHealth+'%'}">
@@ -44,7 +45,7 @@
     <section class="row log" v-if="turns.length>0">
         <div class="small-12 columns">
             <ul>
-                <li v-for="turn in turns">
+                <li v-for="turn in turns" :class="{'player-turn' : turn.isPlayer,'monster-turn' : !turn.isPlayer}">
                     {{turn.text}}
                 </li>
             </ul>
